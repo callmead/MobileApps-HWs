@@ -1,0 +1,62 @@
+	     CS 4330/5390: Mobile Application Development
+
+		     Group Work: GUI Programming
+		 (File $Date: 2018/01/17 23:22:29 $)
+
+January 23, 2018
+
+Names:_____________________________________________
+
+Work in pairs to write a very simple "timer" applet or dialog. The
+applet should consist of three GUI components: a text field to display
+the elapse time in the hh:mm:ss format and start and stop buttons to
+start and stop the timer (see a demo).
+
+Do it incrementally.
+  P1: GUI only consisting of a text field and two buttons.
+      Swing features: JLabel, JButton, and layout managers like
+        BorderLayout and FlowLayout
+
+  P2: Logic for starting and stopping the timer and showing only
+      the start/stop time.
+      Swing features: Event, event handler and event registration
+        ActionEvent, ActionListener, addActionListener
+	long System.currentTimeMillies()
+
+  P3: Display the elapsed time continuoulsy (e.g., at every second).
+      Swing feature: single threadness
+        Use either the javax.swing.Timer class: 
+          Timer(int, ActionListener), start(), stop()
+        or the Thread class and SwingUtilities.invokeLater(Runnable)
+
+Evaluation
+
+(a) Was your pair able to comeplte the lab?
+    P1:   Yes / No
+    P2:   Yes / No
+    P3:   Yes / No
+
+(2) If not, state briefly the challenges or problems that your pair
+    encountered along with your plan to address them.
+
+Applet template:
+  public class TimerApplet extends JApplet {
+    public void init() {  /* configure UI. */ }
+  }
+
+Dialog template:
+  public class TimerDialog extends JDialog {
+    public TimerDialog() {
+      super((JFrame) null, "Timer");
+      setSize(new Dimension(200,100));
+      configureUI();
+      setLocationRelativeTo(null);
+      setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+      setVisible(true);
+      setResizable(false);
+    }
+    private void configureUI() { /* configure UI. */ }
+    public static void main(String[] args) {
+      new TimerDialog();
+    }
+  }

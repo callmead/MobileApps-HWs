@@ -1,0 +1,154 @@
+      CS 4330/5390: Mobile Application Development, Summer 2018
+
+	       HOMEWORK 3: Network and Data Persistence
+		 (File $Date: 2018/07/26 14:53:34 $)
+
+Due: August 1, 2018
+
+This assignment may be done individually or in pairs. If you work in
+pair, you need to fill out the contribution form (see the course
+website).
+
+In this assignment, you are to extend your HW2 code and create the
+ultimate version of the My Price Watcher app that supports network and
+data persistence. Your app shall meet all the relevant requirements
+from the previous homework assignments (HW1 and HW2) as well as the
+following new ones.
+
+R1. The app shall find the price of a watched item from the item's Web
+    page. Remember that the URL of an item is provided by the user
+    when the item is added to the watch list.
+    
+    a. You app shall inform the user if the price of an item can't be
+       found (e.g., malformed or non-existing URL).
+
+    b. You app shall support item pages from the following websites:
+       - Home Depot (www.homedepot.com),
+       - Lowe's (www.lowes.com) or 
+       - at least two online stores of your choice
+
+R2. The app shall persist watched items. Use a SQLite database to
+    store watched items. For bonus points, consider using a
+    CursorAdapter to provide data to the UI (a ListView).
+
+R3. The app shall be aware of the current network status: on/off. If
+    Wifi is off, it shall inform the user and direct to the built-in
+    Network (Wifi) Setting app to enable it.
+
+R4. You should separate network and database operations into separate
+    modules (or classes) to decouple them from the rest of the code.
+
+R5. Use the following configuration for your project.
+
+    Application name: My Price Watcher
+    Company domain: cs4330.cs.utep.edu
+    Minimum SDK version: API 16 - Android 4.1 (Jelly Bean)
+    Main activity: MainActivity
+
+    Name your distribution apk file hw3.apk (see the submission
+    instruction below).
+
+1. (10 points) Design your app and express your design by drawing a
+   UML class diagram [1]. Your class diagram should include both model
+   classes and UI classes (see R4 above) by using a layered
+   architecture, where the business logic layer is completely
+   separated from the presentation layer.
+
+   - Your class diagram should show the main components (classes) 
+     of your app along with their roles and relationships. 
+   - Your model (business logic) classes should be cleanly separated 
+     from the view/control (UI) classes with no dependencies.
+   - For each class in your diagram, define key (public) operations
+     to show its roles or responsibilities.
+   - For each association including aggregation and composition, include
+     at least a label, multiplicities and directions.
+   - For each class appearing in your class diagram, provide a brief 
+     description.
+
+2. (90 points) Code your design by making your code conform to your
+   design.
+
+3. (bonus) Improve the user experience of your app by introducing
+   additional features, e.g., 
+
+   (10 points) Settings to customize the display of watched items,
+    e.g., custom icons for stores. The settings shall be persistent
+    and be implemented by using the Android Preference APIs. Read the
+    online document entitled "Settings" to create your app settings
+    using Android Preference APIs:
+   
+   https://developer.android.com/guide/topics/ui/settings.html
+
+   Android Studio can create a template for you; select New > Activity
+   > Settings Activity.
+
+HINTS
+   
+  Reuse your HW2 design and code as much as possible. Refine your
+  class hierarchy by introducing HW3 specific concepts and subclasses.
+  Most of HW2 view and model classes should be reusable.
+
+  For R3 (to launch the built-in Network (Wifi) Setting app), use an
+  intent android.provider.Settings.ACTION_WIFI_SETTINGS.
+
+  The following classes may be useful for your implementation.
+
+  Wifi
+    android.net.ConnectivityManager
+    android.net.wifi.WifiManager
+
+TESTING
+
+   Your app should run correctly on Android 4.1 (API Level 16) and
+   later.
+
+WHAT AND HOW TO TURN IN
+
+   You should submit hard copies of your UML diagrams along with
+   accompanying documents before the class starts on the due date.
+   Your hard copy submission should include:
+
+   - design.doc (UML class diagram along with descriptions)
+
+   You should submit your program through the Assignment Submission
+   page found in the Homework page of the course website. You should
+   submit a single zip file that contains:
+
+   - A signed Android package (APK) file. Read Section entitled
+     "Publish Your Application" (pages 44-45 of the textbook) for
+     creating an Android distribution file. On Android Studio, use
+     Build > Generate Singed APK ... menu item.
+   - Source code -- the Java src directory in your project folder 
+     (app/src/main/java). Include only Java source code files; do 
+     not include other files such as resource/build files.
+
+   Your zip file should contain a single root directory named
+   YourFirstNameLastName in which all the above-mentioned files and
+   directories reside, e.g.,
+
+   - hw2.apk (signed APK file)
+   - src/... (Java source code files and directories)
+
+   If you work in pair, make only one submission by mentioning both
+   names in your submission. You should turn in your program by 11:59
+   pm on the due date.
+
+DEMO
+
+   You will need to make one or two minutes demo of your app to the
+   course staff.
+
+GRADING
+
+   You will be graded on the quality of your design and how clear your
+   code is. Excessively long code will be penalized: don't repeat code
+   in multiple places. Your code should be well documented by using
+   Javadoc comments and sensibly indented so it is easy to read.
+
+   Be sure your name is in the comments in your source code.
+
+REFERENCES 
+
+   [1] Martina Seidl, et al., UML@Classroom: An Introduction to
+       Object-Oriented Modeling, Springer, 2015. Free ebook through
+       UTEP library.

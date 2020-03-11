@@ -1,0 +1,62 @@
+      CS 4330/5390: Mobile Application Development, Spring 2018
+
+			 HW0: Android Studio
+		 (File $Date: 2018/07/09 19:21:53 $)
+
+Due: July 11, 2018
+
+Install Android Studio on your laptop (or desktop) computer and test
+your installation by creating your first Android "Hello World" app
+that requires no coding. Android Studio is available from
+http://developer.android.com/studio/ and the current version is 3.1.3.
+
+Read Chapter 1 of the textbook (or Chapter 1 of [GG17]) for installing
+Android Studio and creating your first, "Hello World" app. Use the
+following configuration for your app.
+
+  Application name: Hello World
+  Company domain: cs4330.cs.utep.edu
+
+Answer the following questions. If your answer is "No", describe
+briefly the issues or difficulties that you encountered along with
+your plan for addressing them.
+
+1. Have you read Chapter 1 of the textbook? Yes
+
+2. Were you able to install and configure Android Studio? Yes
+   
+3. Were you able to create your Hello World app? Yes
+
+   a. By targetting API 16 (Android 4.1 Jelly Bean), your app will
+      run on approximaely 74.3 % at the time of book was written and 99.2 % of devices (as of July 11, 2018).
+
+4. Were you able to run the app on an emulator (AVD)? Yes
+
+5. Were you able to run the app on an Android device? Yes
+   
+   Refer to an online document entitled "Run apps on a hardware device"
+   (https://developer.android.com/studio/run/device/) or read
+   pages 108-110 of [Chapter 3, GG17] to set up an Android device like
+   a smartphone for app development.
+   
+   On most Android devices (since Android 4.0), the developer
+   mode/settings ("Developer options) is disabled/hidden by default,
+   and you need to tap some secret keys to reveal it. On my Samsung
+   Galaxy 7, for example, I have to tap "Settings > Device > Software
+   info > Build number" 7 times to bring up the Developer
+   Settings. Refer to your device's manual.
+   
+6. Any lessons you learned or advice to others?
+   The app runs faster on the phone then the one on the laptop. 
+   Everything is very simple as mentioned in the book.
+
+7. Change your app's "Hello world!" message to "Hello <your-name>!"
+   and include a screen of the app in your submission.
+
+   Edit app/res/layout/activity_main.xml (or content_main.xml)
+   to change the android:text property of the TexView.
+
+[GG17] Head First Android Development: A Brain-Friendly Guide, 2nd
+   edition, O'Reilly, 2017. Free ebook through UTEP library
+   (http://libraryweb.utep.edu/).
+
